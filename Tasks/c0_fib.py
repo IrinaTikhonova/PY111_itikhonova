@@ -6,7 +6,7 @@ def fib_recursive(n: int) -> int:
     :return: Fibonacci number
     """
     if n < 0:
-        print("Введите положительное число")
+        raise ValueError(f"Is there a {n} number of Fibonacci sequence? I think here should be an exception...")
     if n <= 1:
         return n
     else:
@@ -21,7 +21,7 @@ def fib_iterative(n: int) -> int:
     :return: Fibonacci number
     """
     if n < 0:
-        print("Введите положительное число")
+        raise ValueError(f"Is there a {n} number of Fibonacci sequence? I think here should be and exception...")
 
     if n == 1 or n == 2:
         return 1
