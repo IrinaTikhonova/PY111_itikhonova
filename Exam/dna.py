@@ -7,6 +7,9 @@ def dna_reader(dna_checklist: list) -> str:
         :param dna_checklist: list of string with same length
         :return: result of dna scanning -> string
         """
+    if not dna_checklist:
+        print("The result of first check is clear. No need to re-check")
+
     nucleotide = {i: [] for i, dna in enumerate(dna_checklist)}
 
     for index, dna in enumerate(dna_checklist):
@@ -39,5 +42,7 @@ def dna_reader(dna_checklist: list) -> str:
 
 if __name__ == '__main__':
     list1 = ["ATTA", "ACTA", "AGCA", "ACAA"]
+    list2 = []
     print(dna_reader(list1))
+    print(dna_reader(list2))
     # print(dna_reader_2(list1))
